@@ -1,0 +1,24 @@
+/* hover animations */
+
+.column_2 p:hover {
+    color: #888787 ;
+    transition: transform 2s ease-out ;
+    transform: scale(1.03);
+}
+
+.video_paragraph:hover {
+    color: white;
+    transition: transform 1.5s ease-out;
+    transform: scale(1.1);
+
+}
+
+h1:hover {
+    font-weight: initial;
+}
+
+img:hover {
+    transition: transform 1s ease-out;
+    transform: scale(1.03);
+    filter: initial;
+}
