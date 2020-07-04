@@ -8,10 +8,12 @@ h1 {
 	text-transform: uppercase; /* We are capitalizing our headings */
 	font-family: "Trebuchet MS", Optima; 
 	text-align: center;
-	margin-top: 3%; /* We are adding a small margin above the headings */
     color: #1a1a1a;
 }
 
+.video_head {
+    	margin-top: 3%; /* We are adding a small margin above the video heading*/
+}
 /* Navbar characteristics */
 
 .navbar {
@@ -147,7 +149,7 @@ img {
     box-sizing: border-box;
 }
 
-input[type="text"] {
+input {
     width: 100%;
     padding: 5px;
     margin: 5px auto;
@@ -193,4 +195,11 @@ footer p{
 footer a {
     text-decoration: none;
     text-align: center;
+}
+
+
+/* Fixing the contact info padding */
+
+.contact-form {
+    margin-top: -20px;
 }

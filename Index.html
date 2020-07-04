@@ -5,6 +5,8 @@
         <title>Angel Padilla</title>
         <link rel="stylesheet" type="text/css" href="./CSS/Basic.css">
         <link rel="stylesheet" type="text/css" href="./CSS/animation.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./JavaScript/self-Portfolio.js"></script>
     </head>
     <body class="background">
         <!-- NAV -->
@@ -22,10 +24,11 @@
                 <source src="./videos/video.mp4" type="video/mp4">
             </video>
         </div>
-        
+                <script>document.body.className += ' fade-out';</script>
+
         <!-- VIDEO TEXT -->
         <div class="video_text">
-            <h1>Angel's Portfolio</h1>
+            <h1 class="video_head">Angel's Portfolio</h1>
             <p class="video_paragraph">
                 <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
                 <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
@@ -79,15 +82,17 @@
                 <img src="./Images/Contact.jpg" alt="Contact img">
             </div>
             <div class="column_2">
-                <h1>contact</h1>
-                <form action="" method="get">
+                <h1 class="contact-form">contact</h1>
+                <form name="Contact" action="" method="post" onsubmit="return validateForm()">
                     <p>
-                        Name: <br>
-                        <input type="text" placeholder="Your Name"><br>
-                        Email: <br>
-                        <input type="text" id="email" name="email" placeholder="Youremail@email.com"><br>
-                        Message: <br>
-                        <input type="text" name="message" id="message" placeholder="Please enter a message"><br>
+                        <label for="Name">Name: </label>
+                        <input type="text" id="Name" placeholder="Your Name">
+                        <label for="Phone">Phone: </label>
+                        <input type="tel" name="Phone" id="Phone" placeholder="(555)-555-5555">
+                        <label for="Email">Email: </label>
+                        <input type="text" id="Email" name="Email" placeholder="Youremail@email.com">
+                        <label for="Message">Message: </label>
+                        <input type="text" name="Message" id="Message" placeholder="Please enter a message">
                         <input type="submit" value="Submit">
                     </p>
                 </form>
@@ -104,7 +109,12 @@
 
 
 
-
+        <script>
+            $(function() {
+                $('body').removeClass('fade-out');
+                $()
+            })
+        </script>
 
     </body>
 </html>
