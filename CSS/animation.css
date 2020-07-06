@@ -35,3 +35,23 @@ body.fade-out {
     opacity: 0;
     transition: none;
 }
+
+/* having the Nav float in from the left */
+ @keyframes float-in-left {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+@keyframes float-in-top {
+    from{top: -100vw;}
+    to {top: 0vw}
+}
+
+.navbar {
+    -webkit-animation: float-in-left 5s;
+    animation: float-in-left 5s;
+}
+.navbar a {
+    -webkit-animation: float-in-top 5.75s;
+    animation: float-in-top 5.75s;
+}

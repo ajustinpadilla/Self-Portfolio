@@ -14,7 +14,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#git">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onclick="openForm()">Contact</a>
         </div>
         <!-- END NAV -->
 
@@ -45,8 +45,18 @@
 
         <!-- ABOUT -->
         <div class="row" id="about">
-            <div class="column_1">
-                <img src="./Images/macbook-pro-92904.jpg" alt="">
+            <div class="column_1" style="padding: 0;">
+                <div id="slideshow">
+                    <div>
+                      <img src="./Images/Face.JPG" alt="Face">
+                    </div>
+                    <div>
+                      <img src="./Images/Fins.jpg" alt="Fins">
+                    </div>
+                    <div>
+                      <img src="./Images/GearHolding.jpg" alt="Holding Gear">
+                    </div>
+                 </div>
             </div>
             
             <div class="column_2">
@@ -64,7 +74,7 @@
         <div class="row" id="git">
             <div class="column_2">
                 <h1>GitHub</h1>
-                <p>Refer to my GitHub profile linked below to veiw my coding projects: <br>
+                <p style="text-align: center;">Refer to my GitHub profile linked below to veiw my coding projects: <br>
                     <a href="https://www.github.com/ajustinpadilla">
                         <img class="gitlogo" src="./Images/github_PNG20.png" alt="Github">
                     </a>
@@ -82,8 +92,9 @@
                 <img src="./Images/Contact.jpg" alt="Contact img">
             </div>
             <div class="column_2">
-                <h1 class="contact-form">contact</h1>
-                <form name="Contact" action="" method="post" onsubmit="return validateForm()">
+                <h1 class="formHeading">contact</h1>
+                <button id="openFormBtn" class="openFormBtn" onclick="openForm()">Contact Me</button>
+                <form class="contact-form" id="contactForm" name="Contact" action="" method="post" onsubmit="return validateForm()">
                     <p>
                         <label for="Name">Name: </label>
                         <input type="text" id="Name" placeholder="Your Name">
@@ -92,8 +103,9 @@
                         <label for="Email">Email: </label>
                         <input type="text" id="Email" name="Email" placeholder="Youremail@email.com">
                         <label for="Message">Message: </label>
-                        <input type="text" name="Message" id="Message" placeholder="Please enter a message">
+                        <input type="text" name="Message" id="Message" placeholder="Leave me a message if you would like...">
                         <input type="submit" value="Submit">
+                        <button onclick="closeForm()" id="closeFormBtn" class="closeFormBtn">Cancel</button>
                     </p>
                 </form>
             </div>
@@ -114,6 +126,17 @@
                 $('body').removeClass('fade-out');
                 $()
             })
+
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() { 
+            $('#slideshow > div:first')
+                .fadeOut(1500)
+                .next()
+                .fadeIn(1500)
+                .end()
+                .appendTo('#slideshow');
+            },  4000);
         </script>
 
     </body>
